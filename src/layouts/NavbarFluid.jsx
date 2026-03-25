@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
-import { FaBook, FaBriefcase, FaHome, FaSignOutAlt, FaUser } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaHome, FaInfoCircle, FaSignOutAlt, FaUser } from 'react-icons/fa';
 
 import { useNavigation } from '../contexts/NavigationContext';
 import useAuthStore from '../stores/AuthStore';
@@ -84,6 +84,9 @@ const SiteNavbarFluid = () => {
           <Nav className="ms-auto" style={{ fontSize: "0.875rem" }}>
             <Nav.Link href="/account/profile" onClick={(e) => handleNavClick('account', e)}>
               <FaUser className="me-1" /> Account
+            </Nav.Link>
+            <Nav.Link href="/about" onClick={(e) => handleNavClick('logout', e)}>
+              <FaInfoCircle className="me-1" /> About
             </Nav.Link>
             <Nav.Link href="/logout" onClick={(e) => handleNavClick('logout', e)}>
               <FaSignOutAlt className="me-1" /> Logout

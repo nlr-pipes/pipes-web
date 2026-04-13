@@ -1,13 +1,13 @@
 .banner {
-  height: 142px;
   width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .banner-pipes-name {
-  margin-top: 20px;
   font-size: 38px;
   font-weight: bold;
-  text-align: left
+  text-align: left;
 }
 
 .banner-pipes-name a {

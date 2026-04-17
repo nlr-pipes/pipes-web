@@ -199,3 +199,8 @@ Temporary Items
 
 # Git worktrees
 .worktrees/
+
+
+# Claude
+.claude/
+

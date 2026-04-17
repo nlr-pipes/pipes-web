@@ -238,6 +238,7 @@ const CreateCatalogModelPage = () => {
 
     const cleanedFormData = {
       catalog_schema: "Default",
+      schema_version: "1.0",
       name: formData.name.trim(),
       display_name: formData.displayName?.trim() || null,
       type: formData.type.trim(),

@@ -84,6 +84,7 @@ import UpdateAccessGroupPage from "./pages/AccessGroups/UpdateAccessGroupPage";
 import ChangePasswordPage from "./pages/Account/ChangePasswordPage";
 import ForgotPasswordPage from "./pages/Account/ForgotPasswordPage";
 import LoginPage from "./pages/Account/LoginPage";
+import AboutPage from "./pages/About/AboutPage";
 import LogoutPage from "./pages/Account/LogoutPage";
 import NewPasswordChallengePage from "./pages/Account/NewPasswordChallengePage";
 import ProfilePage from "./pages/Account/ProfilePage";
@@ -312,6 +313,7 @@ function App() {
                     path="/login"
                     element={isAuthenticated ? <Navigate to="/projects" /> : <LoginPage />}
                   />
+                  <Route path="/about" element={<AboutPage />} />
                   <Route path="/logout" element={<LogoutPage />} />
                   <Route path="/account/tokens" element={<TokensPage />} />
                   <Route path="/account/profile" element={<ProfilePage />} />

@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
-import { FaBook, FaBriefcase, FaHome, FaSignOutAlt, FaUser } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaHome, FaInfoCircle, FaSignOutAlt, FaUser } from 'react-icons/fa';
 
 import { useNavigation } from '../contexts/NavigationContext';
 import useAuthStore from '../stores/AuthStore';
@@ -44,7 +44,7 @@ const SiteNavbarFluid = () => {
               className="rounded"
               src="/images/PIPES-Logo-IconAcronym-FullColor.png"
               alt="PIPES"
-              style={{ maxHeight: "100px" }}
+              style={{ maxHeight: "70px" }}
               fluid
             />
             <span className="pipes-full-name ms-2" style={{ fontSize: '1.75rem', color: '#000' }}>
@@ -55,9 +55,9 @@ const SiteNavbarFluid = () => {
         <Col className="d-flex justify-content-end" xs={6} style={{ height: "100px" }}>
           <Image
             className="banner-image"
-            src="/images/nlr.webp"
+            src="/images/nlr-logo-horizontal.svg"
             alt="NLR"
-            style={{ maxHeight: "100px" }}
+            style={{ maxHeight: "70px", marginRight: "10px", marginTop: "10px" }}
             fluid
           />
         </Col>
@@ -84,6 +84,9 @@ const SiteNavbarFluid = () => {
           <Nav className="ms-auto" style={{ fontSize: "0.875rem" }}>
             <Nav.Link href="/account/profile" onClick={(e) => handleNavClick('account', e)}>
               <FaUser className="me-1" /> Account
+            </Nav.Link>
+            <Nav.Link href="/about" onClick={(e) => handleNavClick('logout', e)}>
+              <FaInfoCircle className="me-1" /> About
             </Nav.Link>
             <Nav.Link href="/logout" onClick={(e) => handleNavClick('logout', e)}>
               <FaSignOutAlt className="me-1" /> Logout

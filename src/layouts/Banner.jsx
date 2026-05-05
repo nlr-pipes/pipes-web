@@ -9,13 +9,13 @@ const SiteBanner = () => {
   return (
     <Container className="banner">
       <Row>
-        <Col className="banner-pipes-name" md={9} sm={8} xs={8}>
+        <Col className="banner-pipes-name d-flex align-items-center" md={9} sm={8} xs={8}>
           <a href="/">
             <Image
               className="rounded"
               src="/images/PIPES-Logo-FullColor.png"
               alt="PIPES"
-              style={{ width: "28%" }}
+              style={{ width: "18%" }}
               fluid
             />
           </a>
@@ -23,7 +23,7 @@ const SiteBanner = () => {
         <Col className="banner-container" md={3} sm={4} xs={4}>
           <Image
             className="banner-image"
-            src="/images/nlr.webp"
+            src="/images/nlr-logo-horizontal.svg"
             alt="NLR"
             fluid
           />

@@ -44,7 +44,7 @@ const SiteNavbarFluid = () => {
               className="rounded"
               src="/images/PIPES-Logo-IconAcronym-FullColor.png"
               alt="PIPES"
-              style={{ maxHeight: "100px" }}
+              style={{ maxHeight: "70px" }}
               fluid
             />
             <span className="pipes-full-name ms-2" style={{ fontSize: '1.75rem', color: '#000' }}>
@@ -55,9 +55,9 @@ const SiteNavbarFluid = () => {
         <Col className="d-flex justify-content-end" xs={6} style={{ height: "100px" }}>
           <Image
             className="banner-image"
-            src="/images/nlr.webp"
+            src="/images/nlr-logo-horizontal.svg"
             alt="NLR"
-            style={{ maxHeight: "100px" }}
+            style={{ maxHeight: "70px", marginRight: "10px", marginTop: "10px" }}
             fluid
           />
         </Col>

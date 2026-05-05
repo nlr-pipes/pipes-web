@@ -196,3 +196,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Git worktrees
+.worktrees/
+
+
+# Claude
+.claude/
+

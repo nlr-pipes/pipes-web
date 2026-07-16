@@ -93,7 +93,7 @@ The following skills and frameworks are recommended:
 
 ## 3. Coding Workflow
 
-PIPES adopts a test-driven development workflow using [Superpowers](https://github.com/obra/superpowers) — a composable skill library for Claude Code that enforces TDD (RED-GREEN-REFACTOR), systematic debugging, and structured code review.
+PIPES adopts a test-driven development workflow using [Superpowers](https://github.com/obra/superpowers) — a composable skill library for Claude Code that enforces TDD, systematic debugging, and structured code review.
 
 ### Workflow Overview
 

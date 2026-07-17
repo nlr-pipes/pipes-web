@@ -18,8 +18,24 @@ phases:
       - git status
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - RELEASE_SHA=$(echo $CODEBUILD_SOURCE_VERSION | head -c 7)
-      - BRANCH_NAME1=$(echo $CODEBUILD_WEBHOOK_BASE_REF | cut -d'/' -f 3)
+      - |
+      if [ -n "$CODEBUILD_SOURCE_VERSION" ]; then
+        SOURCE_VERSION="$CODEBUILD_SOURCE_VERSION"
+      elif [ -n "$SOURCE_VERSION_OVERRIDE" ]; then
+        SOURCE_VERSION="$SOURCE_VERSION_OVERRIDE"
+      else
+        echo "ERROR: Source version is not available"
+        exit 1
+      fi
+    - |
+      if [ -n "$CODEBUILD_WEBHOOK_BASE_REF" ]; then
+        BRANCH_NAME1=$(echo "$CODEBUILD_WEBHOOK_BASE_REF" | sed 's#refs/heads/##')
+      elif [ -n "$BASE_BRANCH_OVERRIDE" ]; then
+        BRANCH_NAME1="$BASE_BRANCH_OVERRIDE"
+      else
+        BRANCH_NAME1=$(echo "$SOURCE_VERSION" | sed 's#refs/heads/##')
+      fi
+    - RELEASE_SHA=$(echo "$SOURCE_VERSION" | head -c 7)
   build:
     commands:
       - echo Build started on `date`
